@@ -39,10 +39,10 @@ namespace DisinfectionAlarmSys
         {
             InitializeComponent();
 
-            //_dbName = Cesco.FW.Global.DBAdapter.ConfigurationDetail.DBName.CESNET2;
-            //_strDBConnection = "Data Source=maindb.cesco.biz,11433;Initial Catalog=CESCO_ACCOUNT;Password=cescoeisadm;Persist Security Info=True;User ID=cescoeisadm;";
-            _dbName = Cesco.FW.Global.DBAdapter.ConfigurationDetail.DBName.TESTSERVER;
-            _strDBConnection = "Data Source=devdb.cesco.biz,11433;Initial Catalog=CESCO_ACCOUNT;Password=15490;Persist Security Info=True;User ID=15490;";
+            _dbName = Cesco.FW.Global.DBAdapter.ConfigurationDetail.DBName.CESNET2;
+            _strDBConnection = "Data Source=maindb.cesco.biz,11433;Initial Catalog=CESCO_ACCOUNT;Password=cescoeisadm;Persist Security Info=True;User ID=cescoeisadm;";
+            //_dbName = Cesco.FW.Global.DBAdapter.ConfigurationDetail.DBName.TESTSERVER;
+            //_strDBConnection = "Data Source=devdb.cesco.biz,11433;Initial Catalog=CESCO_ACCOUNT;Password=15490;Persist Security Info=True;User ID=15490;";
 
             switch (_dbName.ToString())
             {
@@ -110,8 +110,8 @@ namespace DisinfectionAlarmSys
             {
                 this.Cursor = Cursors.WaitCursor;
 
-                dbA.Procedure.ProcedureName = "CESNET2.DBO.Usp_Csn_Set_DisInfection_Auto_Alram_Batch_20221202";
-                //dbA.Procedure.ProcedureName = "CESNET2.DBO.Usp_Csn_Set_DisInfection_Auto_Alram_Batch";
+                //dbA.Procedure.ProcedureName = "CESNET2.DBO.Usp_Csn_Set_DisInfection_Auto_Alram_Batch_20221202";
+                dbA.Procedure.ProcedureName = "CESNET2.DBO.Usp_Csn_Set_DisInfection_Auto_Alram_Batch";
 
                 DataSet ds = dbA.ProcedureToDataSetCompress();
 
@@ -201,8 +201,6 @@ namespace DisinfectionAlarmSys
                             this.Cursor = Cursors.Default;
                         }
                     }
-
-                    mailInfos = null;
                 }
             }
             else if (pGubn == "2")
@@ -256,8 +254,6 @@ namespace DisinfectionAlarmSys
                             this.Cursor = Cursors.Default;
                         }
                     }
-
-                    mailInfos = null;
                 }
             }
         }
