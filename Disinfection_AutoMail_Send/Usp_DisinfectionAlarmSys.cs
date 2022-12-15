@@ -156,8 +156,8 @@ namespace DisinfectionAlarmSys
                                      "</body></html>";
 
                     mailInfos.SendEmail = new Cesco.FW.Global.Groupware.EmailAddress("시스템", "postmaster@cesco.co.kr"); // 발신자
-                    //mailInfos.ToEmails.Add(new Cesco.FW.Global.Groupware.EmailAddress("", dRow["RNMG"].ToString())); // 수신자
-                    mailInfos.ToEmails.Add(new Cesco.FW.Global.Groupware.EmailAddress("", "BH0719@cesco.co.kr")); // 수신자
+                    mailInfos.ToEmails.Add(new Cesco.FW.Global.Groupware.EmailAddress("", dRow["RNMG"].ToString())); // 수신자
+                    //mailInfos.ToEmails.Add(new Cesco.FW.Global.Groupware.EmailAddress("", "BH0719@cesco.co.kr")); // 수신자
 
                     var result = Cesco.FW.Global.Groupware.MailController.Send(mailInfos);
 
@@ -216,8 +216,8 @@ namespace DisinfectionAlarmSys
                                      "</body></html>";
 
                     mailInfos.SendEmail = new Cesco.FW.Global.Groupware.EmailAddress("시스템", "postmaster@cesco.co.kr"); // 발신자
-                    //mailInfos.ToEmails.Add(new Cesco.FW.Global.Groupware.EmailAddress("", dRow["RNMG"].ToString())); // 수신자
-                    mailInfos.ToEmails.Add(new Cesco.FW.Global.Groupware.EmailAddress("", "BH0719@cesco.co.kr")); // 수신자
+                    mailInfos.ToEmails.Add(new Cesco.FW.Global.Groupware.EmailAddress("", dRow["RNMG"].ToString())); // 수신자
+                    //mailInfos.ToEmails.Add(new Cesco.FW.Global.Groupware.EmailAddress("", "BH0719@cesco.co.kr")); // 수신자
 
                     var result = Cesco.FW.Global.Groupware.MailController.Send(mailInfos);
 
